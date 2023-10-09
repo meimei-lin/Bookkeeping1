@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MonthChartActivity"
+    android:orientation="vertical"
+    android:background="@color/grey_f3f3f3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/chart_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:minWidth="48dp"
+            android:onClick="onClick"
+            android:src="@drawable/iv_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="詳情資訊"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/chart_iv_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:minWidth="48dp"
+            android:onClick="onClick"
+            android:src="@drawable/calendar" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/chart_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2023年8月帳單"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/chart_tv_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共1筆支出，$200"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/chart_tv_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共2筆收入，$2000"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/chart_btn_out"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/main_recordbtn_bg"
+            android:onClick="onClick"
+            android:text="支出"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/chart_btn_in"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/diaglog_btn_bg"
+            android:onClick="onClick"
+            android:text="收入"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/chart_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name" />
+</LinearLayout>

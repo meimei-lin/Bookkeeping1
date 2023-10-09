@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/dialod_remark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_remark"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/dialog_remark_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialod_remark_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:hint="@string/remark"
+        android:minHeight="48dp"
+        android:textSize="14sp">
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_remark_et"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/dialog_remark_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/diaglog_btn_bg"
+            android:text="@string/cancel"
+            android:textColor="@color/purple_ba55d3"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            app:backgroundTint="@null"/>
+        <Button
+            android:id="@+id/dialog_remark_btn_ensure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_recordbtn_bg"
+            android:text="@string/ensure"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            app:backgroundTint="@null"/>
+
+    </LinearLayout>
+</RelativeLayout>
